@@ -1,0 +1,20 @@
+name: MinVer Calculate
+description: Uses the the MinVer tool to calculate the version of your projects.
+inputs:
+  level:
+    description: Sets the verbosity level of the command. Allowed values are e[rror], w[arn], i[nfo], d[ebug] and t[race]. The default is info.
+    required: true
+    default: 'info'
+outputs:
+  version:
+    description: The calculated version in SEMVER format.
+    value: ${{ steps.minver-calculate.outputs.semver }}
+runs:
+  using: composite
+  steps:
+    - id: minver-calculate
+      run: |
+        semver=$(minver -i -v ${{ inputs.level }})
+        echo "semver=$semver" >> $GITHUB_OUTPUT
+        echo "MINVERVERSIONOVERRIDE=$semver" >> $GITHUB_ENV
+      shell: bash
