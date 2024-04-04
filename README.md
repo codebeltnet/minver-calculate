@@ -2,6 +2,8 @@
 
 Uses the the [MinVer tool](https://github.com/codebeltnet/dotnet-tool-install-minver) to calculate the version of your projects.
 
+Aside outputting the calculated version, this action also provides a `MINVERVERSIONOVERRIDE` environment variable that can be used as part of your current job (typically build).
+
 > This action is part of the Codebelt ecosystem and ensures a consistent way of: 
 > 
 > - Defining your CI/CD pipeline 
