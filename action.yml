@@ -16,5 +16,4 @@ runs:
       run: |
         semver=$(minver -i -v ${{ inputs.level }})
         echo "semver=$semver" >> $GITHUB_OUTPUT
-        echo "MINVERVERSIONOVERRIDE=$semver" >> $GITHUB_ENV
       shell: bash

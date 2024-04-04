@@ -1,10 +1,17 @@
 # MinVer Calculate
 
-Uses the the [MinVer tool](https://github.com/codebeltnet/dotnet-tool-install-minver) to calculate the version of your projects that should rely on Codebelt methodology.
+Uses the the [MinVer tool](https://github.com/codebeltnet/dotnet-tool-install-minver) to calculate the version of your projects.
 
-Aside outputting the calculated version, this action also provides a `MINVERVERSIONOVERRIDE` environment variable that can be used as part of your job.
-
-This ensures a smooth and consistent way to setup your CI/CD pipeline as well as structuring your repository.
+> This action is part of the Codebelt ecosystem and ensures a consistent way of: 
+> 
+> - Defining your CI/CD pipeline 
+> - Structuring your repository
+> - Keeping your codebase small and feasible
+> - Writing clean and maintainable code
+> - Deploying your code to different environments
+> - Automating as much as possible
+>
+> A paved path to excel as a DevSecOps Engineer.
 
 ## Usage
 
