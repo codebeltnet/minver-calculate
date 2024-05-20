@@ -32,7 +32,7 @@ with:
   # The default is:
   # -i (ignore height)
   # -t (uses tag-prefix 'v')
-  # -v (uses verbosity level info)
+  # -v i (uses verbosity level info)
   options: '-i -t v -v i'
 ```
 
