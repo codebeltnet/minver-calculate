@@ -20,17 +20,20 @@ Aside outputting the calculated version, this action also provides a `MINVERVERS
 To use this action in your GitHub repository, you can follow these steps:
 
 ```yaml
-uses: codebeltnet/minver-calculate@v1
+uses: codebeltnet/minver-calculate@v2
 ```
 
 ### Inputs
 
 ```yaml
 with:
-  # Sets the verbosity level of the command.
-  # Allowed values are e[rror], w[arn], i[nfo], d[ebug] and t[race]. 
-  # The default is info.
-  level: 'info'
+  # Options to pass to the MinVer tool.
+  # https://github.com/adamralph/minver/blob/main/README.md#options
+  # The default is:
+  # -i (ignore height)
+  # -t (uses tag-prefix 'v')
+  # -v (uses verbosity level info)
+  options: '-i -t v -v i'
 ```
 
 ### Outputs
@@ -100,7 +103,7 @@ jobs:
 
       - id: minver-calculate
         name: Calculate Version
-        uses: codebeltnet/minver-calculate@v1
+        uses: codebeltnet/minver-calculate@v2
 
       - name: Download strongname.snk file
         uses: codebeltnet/gcp-download-file@v1
